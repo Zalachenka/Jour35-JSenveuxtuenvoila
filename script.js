@@ -1,4 +1,4 @@
-// Adds a click and show it in the console
+// Functionality 1bis: Adds a click and show it in the console
 var footerEl = document.querySelector("footer");
 var clickValue = 0
 var onFooterClick = function() {
@@ -8,7 +8,7 @@ var onFooterClick = function() {
 };
 footerEl.addEventListener("click", onFooterClick);
 
-// Makes the navbar interactive on click (scroll down)
+// Functionality 2: Makes the navbar interactive on click (scroll down)
 var navbar = document.querySelector("button");
 var hamburger = document.getElementById('navbarHeader');
 var onNavbarClick = function() {
@@ -16,7 +16,7 @@ var onNavbarClick = function() {
 };
 navbar.addEventListener("click", onNavbarClick);
 
-// Changes the card text to red on click of the "Edit" button 
+// Functionality 3: Changes the card text to red on click of the "Edit" button 
 var card = document.getElementsByClassName("card mb-4")[0];
 var edit = document.querySelectorAll("button")[2];
 var onEditclick = function() {
@@ -24,7 +24,7 @@ var onEditclick = function() {
 }
 card.addEventListener("click", onEditclick);
 
-// Changes the card text to green on click of the "Edit" button, then back to normal when clicked again
+// Functionality 4: Changes the card text to green on click of the "Edit" button, then back to normal when clicked again
 var card2 = document.getElementsByClassName("card mb-4")[1];
 var edit2 = document.querySelectorAll("button")[4];
 var onEdit2click = function() {
@@ -35,7 +35,7 @@ var onEdit2click = function() {
 };
 card2.addEventListener("click", onEdit2click);
 
-// Bootstrap disappears when the navbar is double-clicked, then back when double-clicked again
+// Functionality 5: Bootstrap disappears when the navbar is double-clicked, then back when double-clicked again
 var navbar2 = document.getElementsByClassName("navbar")[0];
 var noCss = function() {
 	if (document.styleSheets[0].disabled === false) {
@@ -50,7 +50,7 @@ var noCss = function() {
 };
 navbar2.addEventListener("dblclick", noCss);
 
-//Reduces any card on the page, and goes back to normal when mouseover again
+// Functionality 6: Reduces any card on the page, and goes back to normal when mouseover again
 var viewButton = document.querySelectorAll(".btn-success");
 var cardText = document.getElementsByClassName("card-text");
 var cardImage = document.getElementsByClassName("card-img-top");
@@ -69,3 +69,4 @@ for(let i = 0; i <= viewButton.length-1; i++) {
     	}
     	viewButton[i].addEventListener("mouseover", reduce);
     }
+// Functionality 7: When the user clicks on the grey button '==>', Card 6 takes the place of the first card
