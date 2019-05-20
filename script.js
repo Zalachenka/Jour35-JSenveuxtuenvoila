@@ -21,3 +21,14 @@ var onEditclick = function() {
 	this.style.color = 'red';
 }
 card.addEventListener("click", onEditclick);
+
+var card2 = document.getElementsByClassName("card mb-4")[1];
+var edit2 = document.querySelectorAll("button")[4];
+var onEdit2click = function() {
+	if (card2.style.color === 'green') {
+		this.style.color = '';}
+	else {card2.style.color = 'green';}
+
+};
+card2.addEventListener("click", onEdit2click);
+
