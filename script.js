@@ -72,11 +72,19 @@ for(let i = 0; i <= viewButton.length-1; i++) {
 // Functionality 7: When the user clicks on the grey button '==>', Card 6 takes the place of the first card
 var fullAlbum = document.getElementsByClassName("col-md-4");
 var parent = document.getElementsByClassName("row")[1];
-var button = document.querySelector("main").querySelectorAll("a")[1]
-button.addEventListener("click", cardMove);
+var greyButton = document.querySelector("main").querySelectorAll("a")[1];
+greyButton.addEventListener("click", cardMove);
 function cardMove() {
 	var card = fullAlbum[fullAlbum.length-1]
 	parent.insertBefore(card, fullAlbum[0]);
 };
 
-	
+var blueButton = document.querySelector("main").querySelectorAll("a")[0];
+blueButton.href = "#";
+
+function cardMoveBackwards() {
+	var otherCard = fullAlbum[0];
+	var card1 = fullAlbum[fullAlbum.length-1]
+	parent.insertBefore(otherCard, card1.nextSibling)
+}
+blueButton.addEventListener("click", cardMoveBackwards)
