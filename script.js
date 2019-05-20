@@ -49,3 +49,23 @@ var noCss = function() {
 	}
 };
 navbar2.addEventListener("dblclick", noCss);
+
+//Reduces any card on the page, and goes back to normal when mouseover again
+var viewButton = document.querySelectorAll(".btn-success");
+var cardText = document.getElementsByClassName("card-text");
+var cardImage = document.getElementsByClassName("card-img-top");
+var cardStatus = false
+
+for(let i = 0; i <= viewButton.length-1; i++) {
+	function reduce() {
+	if (cardStatus === false) {
+		cardText[i].style.display = "none";
+    	cardImage[i].style.width = "20%";
+    	cardStatus = true;}
+    else {
+    	cardText[i].style.display = "initial";
+    	cardImage[i].style.width = "100%";
+    	cardStatus = false;}
+    	}
+    	viewButton[i].addEventListener("mouseover", reduce);
+    }
