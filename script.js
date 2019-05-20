@@ -1,14 +1,3 @@
-// var footerEl = document.querySelector("footer");
-// var clickValue = parseInt(footerEl).value
-// 	clickValue = isNaN(clickValue) ? 0 : clickValue;
-
-// var onFooterClick = function() {
-// 	  clickValue++;
-//     document.querySelector("footer").value = clickValue
-// 	console.log("click number " + clickValue);
-
-// };
-// footerEl.addEventListener("click", onFooterClick);
 var footerEl = document.querySelector("footer");
 var clickValue = 0
 var onFooterClick = function() {
@@ -17,3 +6,11 @@ var onFooterClick = function() {
 	console.log("click number " + clickValue);
 };
 footerEl.addEventListener("click", onFooterClick);
+
+
+var navbar = document.querySelector("button");
+var hamburger = document.getElementById('navbarHeader');
+var onNavbarClick = function() {
+	hamburger.classList.toggle("collapse");
+};
+navbar.addEventListener("click", onNavbarClick);
