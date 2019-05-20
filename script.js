@@ -70,3 +70,13 @@ for(let i = 0; i <= viewButton.length-1; i++) {
     	viewButton[i].addEventListener("mouseover", reduce);
     }
 // Functionality 7: When the user clicks on the grey button '==>', Card 6 takes the place of the first card
+var fullAlbum = document.getElementsByClassName("col-md-4");
+var parent = document.getElementsByClassName("row")[1];
+var button = document.querySelector("main").querySelectorAll("a")[1]
+button.addEventListener("click", cardMove);
+function cardMove() {
+	var card = fullAlbum[fullAlbum.length-1]
+	parent.insertBefore(card, fullAlbum[0]);
+};
+
+	
