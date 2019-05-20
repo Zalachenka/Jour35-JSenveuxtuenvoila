@@ -14,3 +14,10 @@ var onNavbarClick = function() {
 	hamburger.classList.toggle("collapse");
 };
 navbar.addEventListener("click", onNavbarClick);
+
+var card = document.getElementsByClassName("card mb-4")[0];
+var edit = document.querySelectorAll("button")[2];
+var onEditclick = function() {
+	this.style.color = 'red';
+}
+card.addEventListener("click", onEditclick);
